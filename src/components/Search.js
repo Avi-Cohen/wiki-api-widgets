@@ -50,36 +50,3 @@ export default function Search() {
   );
 }
 
-// useEffect depandencies
-// [] - Run at initial render
-// [term] - Run at initial render and run after every rerender (change in the arr)
-// nothing - run at initial render if data has changed since last render
-//   useEffect(() => console.log("i run only once"), []);
-//   useEffect(() => console.log("i run at initial and after every rerender"));
-//   useEffect(() => console.log("i Run at initial render and run after every rerender (change in the arr)"), [term, term2]); either one
-/* 
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
- 
-const App = () => {
-  const [count, setCount] = useState(0);
- 
-  useEffect(() => {
-    console.log('TEST!');
-  }, [count]);
- 
-  const onClick = () => {
-    setCount(count + 1);
-  };
- 
-  return (
-    <div>
-      <h1>Count: {count}</h1>
-      <button onClick={onClick}>Click me!</button>
-    </div>
-  );
-};
- 
-ReactDOM.render(<App />, document.querySelector('#root'));
-
-*/
