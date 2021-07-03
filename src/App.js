@@ -12,15 +12,19 @@ export default function App() {
     { label: "The color Purple", value: "purple" },
   ];
   const [selected, setSelected] = useState(options[0]);
+  const [showDropdown, setShowDropdown] = useState(true);
   return (
-    <>
-      <h1>Widgets App</h1>
-      <Dropdown
-        options={options}
-        selected={selected}
-        onSelectedChange={setSelected}
-      />
-      <Search />
-    </>
+    <div>
+      <button onClick={() => setShowDropdown(!showDropdown)}>
+        Toggle Dropdown
+      </button>
+      {showDropdown ? (
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={options}
+        />
+      ) : null}
+    </div>
   );
 }
